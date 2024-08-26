@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pages xmlns="http://chameleon.ibs-qa.ru/schema/web-elements">
+    <Page name="Главная страница">
+        <Button name="Песочница" locator="//a[@id = 'navbarDropdown']" isLoaded="true"/>
+        <Page name="Меню">
+            <Button name="Товары" locator="//a[@href= '/food']" isLoaded="true"/>
+            <Page name="Список товаров">
+                <Button name="Добавить" locator="//*[text()='Добавить']" isLoaded="true"/>
+                <Collection name="Таблица" locator=".//table/tbody/tr">
+                    <StaticText name="#" locator=".//th" isLoaded="true"/>
+                    <StaticText name="Наименование" locator=".//td[1]" isLoaded="true"/>
+                    <StaticText name="Тип" locator=".//td[2]" isLoaded="true"/>
+                    <StaticText name="Экзотический" locator=".//td[3]" isLoaded="true"/>
+                </Collection>
+                <Page name="Добавление товара">
+                    <StaticText name="Добавление товара" locator="//*[text()='Добавление товара']" isLoaded="true"/>
+                    <TextInput name="Наименование" locator="//input[@placeholder = 'Наименование']" isLoaded="true"/>
+                    <ComboBox name="Тип" locator="//select" isLoaded="true"/>
+                    <CheckBox name="Экзотический" locator="//input[@type = 'checkbox']" isLoaded="true"/>
+                    <Button name="Сохранить" locator="//button[@id = 'save']" isLoaded="true"/>
+                </Page>
+                <StaticText name="Заголовок" locator='//h5[text()="Список товаров"]' isLoaded="true"/>
+            </Page>
+        </Page>
+    </Page>
+</Pages>
